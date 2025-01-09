@@ -6,7 +6,7 @@ import { FileText, Mic, UserCheck, Star } from "lucide-react";
 import aiImage1 from "../../assets/ai-first.jpg";
 import aiImage2 from "../../assets/resume-img.png";
 import TimeLine from "@/components/TimeLine/TimeLine";
-
+import ImprovedStatsCounter from "@/components/Counter/Counter";
 const HomePage: React.FC = () => {
   interface Slide {
     title: string;
@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
     <>
      <div className="flex flex-col min-h-screen bg-white text-gray-800">
       <section className="w-full relative">
-        <div className="bg-[#2563EB] text-white overflow-hidden">
+        <div className="bg-[#4796f6] text-white overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -156,6 +156,11 @@ const HomePage: React.FC = () => {
       {/* Time Line  */}
       <section>
         <TimeLine/>
+      </section>
+
+      {/* Counter */}
+      <section>
+        <ImprovedStatsCounter/>
       </section>
       </div>
     </>
