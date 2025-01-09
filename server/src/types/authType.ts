@@ -15,5 +15,6 @@ interface resetToken{
 
 export interface AuthRequest extends Request {
     user: User;
+    userId: string;
     resetToken: resetToken; 
 }
