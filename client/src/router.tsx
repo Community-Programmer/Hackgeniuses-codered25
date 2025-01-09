@@ -15,6 +15,8 @@ import VerificationStatus from "./pages/EmailVerification/VerificationStatus";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PasswordResetForm from "./pages/ForgotPassword/PasswordResetForm";
 import Interview from "./pages/Interview/Interview";
+import InterviewLayout from "./Layout/InterviewLayout";
+import InterviewHelper from "./pages/Interview/InterviewHelper";
 
 const mainLayoutRoutes = [
   {
@@ -36,6 +38,15 @@ const mainLayoutRoutes = [
   },
 ];
 
+const interviewLayoutRoutes = [
+  {
+    path: "",
+    index: true,
+    element: <InterviewHelper />,
+  },
+
+]
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +66,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainLayout />,
         children: mainLayoutRoutes,
+      }, {
+        path: "/Interview_prep",
+        element: <InterviewLayout />,
+        children: interviewLayoutRoutes,
       },
       {
         path: "/Login",
