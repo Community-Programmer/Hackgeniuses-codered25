@@ -11,10 +11,9 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/about-us", label: "About Us" },
-  { href: "/what-we-do", label: "What We Do" },
-  { href: "/why-us", label: "Why Us" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/interview", label: "Mock Interview" },
+  { href: "/resume", label: "Resume Evaluator" },
+  { href: "/feedback", label: "FeedBack" },
 ];
 
 export default function Navbar() {
