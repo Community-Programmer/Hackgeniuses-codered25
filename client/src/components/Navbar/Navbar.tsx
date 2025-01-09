@@ -35,10 +35,7 @@ export default function Navbar() {
           <div className="relative overflow-hidden group">
             <div className="animate-marquee whitespace-nowrap group-hover:pause">
               <span className="inline-block mx-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-                architecto, ad optio tenetur eum accusantium obcaecati
-                repellendus laborum voluptates doloremque iste, omnis tempora
-                quam, illo est corrupti asperiores commodi delectus.
+              Hi, Welcome to Our Project! Revolutionizing Placement Preparation with AI-Powered Personalized Training, Tailored Roadmaps, and Realistic Simulations for Your Success.
               </span>
             </div>
           </div>
