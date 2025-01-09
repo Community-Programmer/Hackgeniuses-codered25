@@ -3,6 +3,7 @@ import uvicorn
 import os
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes.Interview_Helper import interviewHelper
 
 load_dotenv()
 
@@ -21,6 +22,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(interviewHelper.router, prefix="/api/v1/interviewhelper",tags=["interviewhelper"])
 
 @app.get("/")
 def root():

@@ -2,3 +2,6 @@ fastapi
 uvicorn
 python-dotenv
 jwt
+google-generativeai
+langchain
+langchain_google_genai
