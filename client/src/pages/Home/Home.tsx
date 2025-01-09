@@ -7,6 +7,8 @@ import aiImage1 from "../../assets/ai-first.jpg";
 import aiImage2 from "../../assets/resume-img.png";
 import TimeLine from "@/components/TimeLine/TimeLine";
 import ImprovedStatsCounter from "@/components/Counter/Counter";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+
 const HomePage: React.FC = () => {
   interface Slide {
     title: string;
@@ -163,6 +165,7 @@ const HomePage: React.FC = () => {
         <ImprovedStatsCounter/>
       </section>
       </div>
+      < ScrollToTop/> 
     </>
   );
 };
