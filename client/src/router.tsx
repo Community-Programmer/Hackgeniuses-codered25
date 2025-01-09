@@ -44,8 +44,7 @@ const interviewLayoutRoutes = [
     index: true,
     element: <InterviewHelper />,
   },
-
-]
+];
 
 const router = createBrowserRouter([
   {
@@ -66,7 +65,8 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainLayout />,
         children: mainLayoutRoutes,
-      }, {
+      },
+      {
         path: "/Interview_prep",
         element: <InterviewLayout />,
         children: interviewLayoutRoutes,
