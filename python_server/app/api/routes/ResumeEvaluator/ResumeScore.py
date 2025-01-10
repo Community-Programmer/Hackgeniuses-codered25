@@ -25,7 +25,7 @@ async def test():
 
 @router.post("/evaluate-resume")
 async def evaluate_resume(file: UploadFile = File(...)):
-    logging.info('Received request to evaluate resume')
+    logging.info(f"ATS Response: {ats_response.choices[0].message.content}")
 
     filename = secure_filename(file.filename)
     file_extension = filename.rsplit('.', 1)[1].lower()
@@ -95,7 +95,6 @@ async def evaluate_resume(file: UploadFile = File(...)):
 
     {resume_text}
     """
-
     normal_prompt = f"""
     You are an expert resume evaluator. Evaluate the resume for the role of {role} and return the following JSON format:
     {{

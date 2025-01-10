@@ -19,6 +19,7 @@ import path from "path";
 import TrainerLayout from "./Layout/TrainerLayout";
 import AITutor from "./pages/AI_Tutor/AITutor";
 import Learning from "./pages/AI_Tutor/Learning";
+import ResumeEvaluate from "./pages/ResumeEvaluator/ResumeEvaluator";
 
 const trainerLayout = [];
 
@@ -31,6 +32,10 @@ const mainLayoutRoutes = [
   {
     path: "/About",
     element: <About />,
+  },
+  {
+    path: "/resume",
+    element: <ResumeEvaluate />,
   },
 ];
 
@@ -90,6 +95,7 @@ const router = createBrowserRouter([
         path: "/interview",
         element: <Interview />,
       },
+
       {
         path: "/ai-tutor",
         element: <TrainerLayout />,

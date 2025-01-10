@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import http from 'http';
 import { Server } from 'socket.io';
 import globalErrorHandler from './middleware/globalErrorHandler';
-import passport from 'passport'
+import passport from 'passport';
 import passportConfig from './config/passport';
 import authRouter from './auth/authRoute';
 import aiInterviewerRouter from './Interview/interviewRoutes';
@@ -35,17 +35,15 @@ app.use(cookieParser());
 app.use(passport.initialize());
 passportConfig(passport);
 
-
-
-
 app.get('/', (req: Request, res: Response) => {
   res.json({
     message: 'Welcome to placementpilot Express Backend',
   });
 });
 
-  app.use('/api/v1/auth', authRouter);
-  app.use('/api/v1/interview-helper', aiInterviewerRouter);
-  app.use(globalErrorHandler);
+app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/interview-helper', aiInterviewerRouter);
+app.use('/api/vi/resume-evaluator');
+app.use(globalErrorHandler);
 
 export { server, io };
