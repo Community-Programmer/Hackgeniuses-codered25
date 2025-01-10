@@ -12,6 +12,7 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/interview", label: "Mock Interview" },
+  { href: "/ai-tutor", label: "Prepare" },
   { href: "/resume", label: "Resume Evaluator" },
   { href: "/feedback", label: "FeedBack" },
 ];
@@ -35,7 +36,9 @@ export default function Navbar() {
           <div className="relative overflow-hidden group">
             <div className="animate-marquee whitespace-nowrap group-hover:pause">
               <span className="inline-block mx-4">
-              Hi, Welcome to Our Project! Revolutionizing Placement Preparation with AI-Powered Personalized Training, Tailored Roadmaps, and Realistic Simulations for Your Success.
+                Hi, Welcome to Our Project! Revolutionizing Placement
+                Preparation with AI-Powered Personalized Training, Tailored
+                Roadmaps, and Realistic Simulations for Your Success.
               </span>
             </div>
           </div>

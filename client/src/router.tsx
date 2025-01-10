@@ -5,8 +5,6 @@ import HomePage from "@/pages/Home/Home";
 import LoginForm from "./pages/Login/Login";
 import SignUpForm from "./pages/SignUp/SignUp";
 import About from "./pages/About/About";
-import Features from "./pages/Features/Features";
-import Premium from "./pages/Premium/Premium";
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import RootWrapper from "./Layout/RootWrapper";
@@ -15,8 +13,14 @@ import VerificationStatus from "./pages/EmailVerification/VerificationStatus";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PasswordResetForm from "./pages/ForgotPassword/PasswordResetForm";
 import Interview from "./pages/Interview/Interview";
-import InterviewLayout from "./Layout/InterviewLayout";
+import InterviewLayout from "./Layout/TrainerLayout";
 import InterviewHelper from "./pages/Interview/InterviewHelper";
+import path from "path";
+import TrainerLayout from "./Layout/TrainerLayout";
+import AITutor from "./pages/AI_Tutor/AITutor";
+import Learning from "./pages/AI_Tutor/Learning";
+
+const trainerLayout = [];
 
 const mainLayoutRoutes = [
   {
@@ -27,14 +31,6 @@ const mainLayoutRoutes = [
   {
     path: "/About",
     element: <About />,
-  },
-  {
-    path: "/Features",
-    element: <Features />,
-  },
-  {
-    path: "/Premium",
-    element: <Premium />,
   },
 ];
 
@@ -54,12 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <ProtectedRoute />,
-        children: [
-          {
-            path: "/Features",
-            element: <Features />,
-          },
-        ],
+        children: [],
       },
       {
         path: "/",
@@ -98,6 +89,20 @@ const router = createBrowserRouter([
       {
         path: "/interview",
         element: <Interview />,
+      },
+      {
+        path: "/ai-tutor",
+        element: <TrainerLayout />,
+        children: [
+          {
+            path: "",
+            element: <AITutor />,
+          },
+          {
+            path: "learning",
+            element: <Learning />,
+          },
+        ],
       },
     ],
   },
