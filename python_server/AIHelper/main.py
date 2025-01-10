@@ -117,7 +117,7 @@ Note you have access of of what is shared on screen
 
 async def main() -> None:
     async with websockets.serve(gemini_session_handler, "localhost", 9084):
-        print("Running websocket server localhost:9083...")
+        print("Running websocket server localhost:9084...")
         await asyncio.Future()  # Keep the server running indefinitely
 
 
