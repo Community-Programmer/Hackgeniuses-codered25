@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, Outlet } from "react-router-dom";
 
-const InterviewLayout: React.FC = () => {
+const TrainerLayout: React.FC = () => {
   return (
     <>
       <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
@@ -22,7 +22,7 @@ const InterviewLayout: React.FC = () => {
             <div className="flex-1">
               <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
                 <Link
-                  to="/Interview Helper"
+                  to="/ai-tutor"
                   className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
                 >
                   <FaRobot className="h-4 w-4" />
@@ -60,7 +60,7 @@ const InterviewLayout: React.FC = () => {
                   to="/ai-tutor/voice-mentor"
                   className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
                 >
-                  <AudioLines className="h-4 w-4"/>
+                  <AudioLines className="h-4 w-4" />
                   Voice-Mentor
                 </Link>
               </nav>
@@ -89,7 +89,7 @@ const InterviewLayout: React.FC = () => {
                     <span className="sr-only">AI TUTOR</span>
                   </Link>
                   <Link
-                    to="#"
+                    to="/ai-tutor"
                     className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
                   >
                     <FaRobot className="h-5 w-5" />
@@ -100,7 +100,7 @@ const InterviewLayout: React.FC = () => {
                     className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
                   >
                     <IoBookSharp className="h-4 w-4" />
-                    My Learnings
+                    My Prepration
                   </Link>
                   <Link
                     to="#"
@@ -124,12 +124,12 @@ const InterviewLayout: React.FC = () => {
                     Analytics
                   </Link>
                   <Link
-                  to="/ai-tutor/voice-mentor"
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-                >
-                  <AudioLines className="h-4 w-4"/>
-                  Voice-Mentor
-                </Link>
+                    to="/ai-tutor/voice-mentor"
+                    className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                  >
+                    <AudioLines className="h-4 w-4" />
+                    Voice-Mentor
+                  </Link>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -155,4 +155,4 @@ const InterviewLayout: React.FC = () => {
   );
 };
 
-export default InterviewLayout;
+export default TrainerLayout;
